@@ -1,0 +1,57 @@
+{
+	"routes": [
+		{
+			"_id": "1",
+			"spots": [
+				{
+					"name": "Warsztat Avocado",
+					"order": "1",
+					"latitude": 50.052305,
+					"longitude": 19.942708,
+					"address": "Bozego Ciała 3"
+				},
+				{
+					"name": "Bobby Burger",
+					"order": "2",
+					"latitude": 50.062047,
+					"longitude": 19.941937,
+					"address": "Bozego Ciała 12"
+				},
+				{
+					"name": "Moment",
+					"order": "1",
+					"latitude": 50.051052,
+					"longitude": 19.945844,
+					"address": "Jozefa 13"
+				}
+			],
+			"name": "My 1 day Kazimierz route",
+			"tags": ["Krakow, Kazimierz"],
+			"city": "Krakow",
+			"author": "cemobas"
+		},
+		{
+			"_id": "2",
+			"spots": [
+				{
+					"name": "Kolanko",
+					"order": "1",
+					"latitude": 50.050942,
+					"longitude": 19.946181,
+					"address": "Jozefa 34"
+				},
+				{
+					"name": "Rafet",
+					"order": "2",
+					"latitude": 50.043926,
+					"longitude": 19.94649,
+					"address": "Korona 2"
+				}
+			],
+			"name": "My 1 day Krakow route",
+			"tags": ["Krakow, Kazimierz"],
+			"city": "Krakow",
+			"author": "rafaella"
+		}
+	]
+}
