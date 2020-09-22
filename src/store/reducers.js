@@ -14,8 +14,12 @@ export const route = (state=[{"_id": "0", "name": "foobar route", "author": "foo
 
     switch(action.type) {
         case C.ADD_ROUTE:
-            return [...state, action.payload] // return a new array instead of changing state
-        
+            const hasRoute = state.some(r => r._id === action.payload._id)
+
+            return (hasRoute) ?
+                state :
+                [...state, action.payload].sort((a, b) => a._id - b._id)
+                
         case C.REMOVE_ROUTE:
             return state.filter((r, i) => r._id !== action.payload._id)
         

@@ -28,7 +28,7 @@ const removeCemsRoute = {
 
 const nextStateAfterAddingSkyBar = spot(undefined, addSkyBarAction)
 const nextStateAfterAddingDoruksRoute = route(state.routes, addDoruksRoute)
-const nextStateAfterRemovingCemsRoute = route(state.routes, removeCemsRoute)
+const nextStateAfterRemovingCemsRoute = route(nextStateAfterAddingDoruksRoute, removeCemsRoute)
 
 console.log(`
     initial state: ${JSON.stringify(state)}
