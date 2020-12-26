@@ -28,14 +28,22 @@ const removeCemsRoute = {
 
 const nextStateAfterAddingSkyBar = spot(undefined, addSkyBarAction)
 const nextStateAfterAddingDoruksRoute = route(state.routes, addDoruksRoute)
-const nextStateAfterRemovingCemsRoute = route(nextStateAfterAddingDoruksRoute, removeCemsRoute)
+const nextStateAfterRemovingCemsRoute = route(nextStateAfterAddingDoruksRoute, removeCemsRoute) // composing reducers
 
 console.log(`
     initial state: ${JSON.stringify(state)}
+
     addSkyBarAction: ${JSON.stringify(addSkyBarAction)}
+
     addDoruksRoute: ${JSON.stringify(addDoruksRoute)}
+
     removeCemsRoute: ${JSON.stringify(removeCemsRoute)}
-    new goal 1: ${JSON.stringify(nextStateAfterAddingSkyBar)}
-    new goal 2: ${JSON.stringify(nextStateAfterAddingDoruksRoute)}
-    new goal 3: ${JSON.stringify(nextStateAfterRemovingCemsRoute)}
+
+    Goal 1: Add SkyBar to spots => ${JSON.stringify(nextStateAfterAddingSkyBar)}
+
+    Goal 2: Add Doruk's route to current routes (where there's Cem's route) ======>
+    ${JSON.stringify(nextStateAfterAddingDoruksRoute)}
+
+    Goal 3: Add Remove Cem's route from current routes (from Goal 2) ======>
+    ${JSON.stringify(nextStateAfterRemovingCemsRoute)}
 `)
