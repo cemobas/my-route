@@ -27,7 +27,7 @@ const removeCemsRoute = {
 }
 
 const nextStateAfterAddingSkyBar = spot(undefined, addSkyBarAction)
-const nextStateAfterAddingDoruksRoute = route(state.routes, addDoruksRoute)
+const nextStateAfterAddingDoruksRoute = route(routes, addDoruksRoute)
 const nextStateAfterRemovingCemsRoute = route(nextStateAfterAddingDoruksRoute, removeCemsRoute) // composing reducers
 
 console.log(`
